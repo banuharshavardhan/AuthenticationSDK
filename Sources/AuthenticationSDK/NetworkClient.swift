@@ -16,7 +16,7 @@ public enum Endpoint: Sendable {
     case login
 }
 
-protocol NetworkClientProvider: Sendable {
+public protocol NetworkClientProvider: Sendable {
     func execute<Request: Encodable & Sendable, Response: Decodable & Sendable>(
         endpoint: Endpoint,
         body: Request,
